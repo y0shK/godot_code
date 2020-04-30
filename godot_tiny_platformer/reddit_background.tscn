@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://godot_assets_platformer/forest_background.png" type="Texture" id=1]
+[ext_resource path="res://reddit_background.gd" type="Script" id=2]
+
+[node name="reddit_background" type="Sprite"]
+
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+
