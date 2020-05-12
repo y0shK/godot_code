@@ -13,7 +13,11 @@ const TILES = {
 }
 
 onready var tileMap = get_node("TileMap")
-onready var playerSprite = get_node("Player/Sprite")
+onready var playerSprite = get_node("YSort/Player/Sprite")
+
+onready var playerCollision = get_node("YSort/Player/CollisionShape2D")
+onready var enemyCollision = get_node("YSort/Enemy/CollisionShape2D")
+
 onready var open_simplex_noise
 
 var current_map_size = Vector2(50, 50)
@@ -57,6 +61,11 @@ func _process(delta):
 		#print('shulk')
 		tileMap.set_cell(playerSprite.position.x, playerSprite.position.y, TILES.cactus)
 	
+	#var enemy = load("res://Enemy.tscn")
+	#var enemy_local = enemy.instance()
+	#var world = get_tree().current_scene
+	#world.add_child(enemy_local)
+	#player_enemy_contact(playerCollision, enemyCollision)
 
 #func _generate_world():
 #	for x in WIDTH:
@@ -186,3 +195,18 @@ func smooth_map(noise):
 #		return TILES.cactus
 #	else:
 #		return TILES.green
+
+#func player_enemy_contact(playerCollision, enemyCollision):
+#	pass
+	#var n1 = get_node("Player/CollisionShape2D")
+	#var n2 = get_node("Enemy/CollisionShape2D")
+	#if n1.position - n2.position == Vector2.ZERO:
+	#	print('cloud')
+	
+	#var load_enemy = load("res://Enemy.tscn")
+	#var load_enemy_instance = load_enemy.instance()
+	#load.get_node('Ene')
+	#var enemy1 = enemy.()
+	#add_child(load_enemy_instance)
+
+	#if load_enemy_instance
