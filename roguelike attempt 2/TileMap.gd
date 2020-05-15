@@ -29,10 +29,7 @@ func _ready():
 	make_map()
 		
 func _process(_delta):
-	if Input.is_action_just_pressed("ui_right"):
-		smooth_map()
-	if Input.is_action_just_pressed("ui_accept"):
-		make_map()
+	pass
 
 func make_map():
 	for x in range(1, current_map_size.x - 1):
