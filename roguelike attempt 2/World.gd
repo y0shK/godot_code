@@ -6,6 +6,6 @@ func _on_Enemy_body_entered(body):
 	if body.is_in_group('Player'):
 		print('groups work')
 		body.queue_free()
-		SceneChanger.change_scene("res://WorldToChangeTo.tscn")
+		SceneChanger.change_scene("res://Scene2.tscn")
 		
 #change_scene("BindingOfIsaac.tscn")
